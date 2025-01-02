@@ -1,0 +1,22 @@
+function PlotCosts(F4)
+
+Costs = [F1.Cost];
+              YY =1./ Costs(1, :);
+      XX = Costs(2, :); %灌水量
+%                 YY =Costs(3, :);
+    plot(XX,YY ,'k.', 'MarkerSize', 10);
+    xlabel('灌水量');
+    ylabel('产量');
+    %zlabel('碳排放量');
+    grid on; 
+    
+    Costs = [F1.Cost];
+    XX =1./ Costs(1, :);
+    YY = Costs(2, :);
+    ZZ =Costs(3, :);
+    plot3(XX,YY,ZZ ,'k.', 'MarkerSize', 10);
+    xlabel('产量');
+    ylabel('灌水量');
+    zlabel('碳排放量');
+    grid on;
+end
